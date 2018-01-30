@@ -45,11 +45,24 @@ public class MapExtended implements IExtended {
       s.append(key.toString());
       s.setCharAt(3, Character.toUpperCase(s.charAt(3)));
       try {
-        return map.getClass().getMethod(s.toString()).invoke(map);
+          Object value = map.getClass().getMethod(s.toString()).invoke(map);
+        return value == null ? "" : value;
       } catch (Throwable e) {
-        return null;
+        return getIsValue(map, key);
       }
     }
+  }
+
+  protected static Object getIsValue(Object map, Object key) {
+      StringBuilder s = new StringBuilder("is");
+      s.append(key.toString());
+      s.setCharAt(2, Character.toUpperCase(s.charAt(2)));
+      try {
+          Object value = map.getClass().getMethod(s.toString()).invoke(map);
+          return value == null ? "" : value;
+      } catch (Throwable e) {
+          return "";
+      }
   }
 
   /** 关键字表达式 */

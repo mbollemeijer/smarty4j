@@ -1,5 +1,7 @@
 package org.lilystudio.smarty4j;
 
+import javax.print.attribute.standard.PrinterURI;
+
 /**
  * user
  *
@@ -8,6 +10,8 @@ package org.lilystudio.smarty4j;
 public class User {
     private Integer id;
     private String name;
+    private boolean admin;
+    private String emptyValue;
 
     public User() {
 
@@ -32,5 +36,21 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(final boolean admin) {
+        this.admin = admin;
+    }
+
+    public String getEmptyValue() {
+        return emptyValue;
+    }
+
+    public void setEmptyValue(final String emptyValue) {
+        this.emptyValue = emptyValue;
     }
 }

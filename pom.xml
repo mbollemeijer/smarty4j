@@ -4,7 +4,7 @@
 
     <groupId>org.lilystudio</groupId>
     <artifactId>smarty4j</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Smarty Engine for Java</name>
