@@ -40,7 +40,7 @@ public class SmartyTemplateTest extends TestCase {
     public void testRender() throws Exception {
         Template template = smartyEngine.getTemplate("demo.tpl");
         Context context = new Context();
-        context.set("title", "欢迎光临222");
+        context.set("title", "testRender");
         List<User> users = new ArrayList<User>();
         users.add(new User(1, "chuck"));
         users.add(new User(2, "norris"));
